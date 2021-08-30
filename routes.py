@@ -16,4 +16,4 @@ def myth():
     return render_template('myth.html', the_title='Tiger in Myth and Legend')
 
 if __name__ == '__main__':
-    app.run(debug=True,host='0.0.0.0')
+    app.run(debug=True,host='0.0.0.0',port='5200')
