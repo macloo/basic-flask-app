@@ -12,3 +12,5 @@ Thumbs.db
 
 # folders to be ignored
 env/
+venv
+__pycache__
