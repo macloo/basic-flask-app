@@ -8,6 +8,7 @@ ehthumbs.db
 Thumbs.db
 
 # Python executables
+__pycache__
 *.pyc
 
 # folders to be ignored

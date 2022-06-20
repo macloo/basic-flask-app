@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<!-- to be filled by the Python script -->
+<h1>{{ the_title }}</h1>
+
+<!-- note how items from the "static" folder are linked -->
+<p>View function 1 </p>
+
+<p>This is the index page for my example Flask app apis.</p>
+
+<ul>
+  <!-- note how items from routes in the the Python script are linked -->
+  <li><a href="{{ url_for('api1.sub_api1') }}?{{ "name="+name if name else ''}}">Hello 1</a></li>
+  <li><a href="{{ url_for('api2.api2_1.sub_api1') }}?{{ "name="+name if name else ''}}">Hello 2</a></li>
+  <li><a href="{{ url_for('api2.api2_2.sub_api2') }}?{{ "name="+name if name else ''}}">Hello 3</a></li>
+</ul>
+
+
+{% endblock %}
