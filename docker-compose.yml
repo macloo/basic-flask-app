@@ -1,0 +1,12 @@
+version: '3'
+services:
+  sast:
+    image: returntocorp/semgrep
+    command: semgrep ci -q --config "p/flask"
+    volumes:
+      - ./app:/src
+  web:
+    build: ./
+    depends_on:
+      sast:
+        condition: service_completed_successfully
